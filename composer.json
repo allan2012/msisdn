@@ -8,9 +8,9 @@
             "email": "allan.koskei@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
-        "php": ">=7.0"
+        "php": "^7.0"
     },
     "autoload": {
         "psr-0": {
