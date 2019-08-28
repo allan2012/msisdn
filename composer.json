@@ -2,10 +2,12 @@
     "name": "allan/msisdn",
     "description": "Msisdn number format, Prefixes are updated courtesy of https://en.wikipedia.org/wiki/Telephone_numbers_in_Kenya",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
-            "name": "Allan Kibet",
-            "email": "allan.koskei@gmail.com"
+            "name": "Allan Kibet Koskei",
+            "email": "allan.koskei@gmail.com",
+            "role": "Developer"
         }
     ],
     "minimum-stability": "dev",
