@@ -31,5 +31,5 @@ var_dump(Utility::channel(254720000000)); // string(9) "SAFARICOM"
 use Msisdn\Utility;
 include 'vendor/autoload.php';
 
-var_dump(Utility::channel("0720000000")); // int(254720000000)
+var_dump(Utility::clean("0720000000")); // int(254720000000)
 ```
