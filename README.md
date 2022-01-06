@@ -22,7 +22,9 @@ composer require allan/msisdn
 use Msisdn\Utility;
 include 'vendor/autoload.php';
 
-var_dump(Utility::channel(254720000000)); // string(9) "SAFARICOM"
+var_dump(Utility::getMobileNetworkOperator("+254 720 000000")); // string(9) "Safaricom"
+var_dump(Utility::getMobileNetworkOperator("0720000000")); // string(9) "Safaricom"
+var_dump(Utility::getMobileNetworkOperator("720000000")); // string(9) "Safaricom"
 ```
 
 ### Clean MSISDN
@@ -31,5 +33,8 @@ var_dump(Utility::channel(254720000000)); // string(9) "SAFARICOM"
 use Msisdn\Utility;
 include 'vendor/autoload.php';
 
+var_dump(Utility::clean("+254 720 000000")); // int(254720000000)
 var_dump(Utility::clean("0720000000")); // int(254720000000)
+var_dump(Utility::clean("720000000")); // int(254720000000)
+var_dump(Utility::clean("7200022")); // int(-1) invalid MSISDN format that cannot be sanitized
 ```

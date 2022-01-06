@@ -13,11 +13,14 @@
     "minimum-stability": "dev",
     "prefer-stable" : true,
     "require": {
-        "php": "^7.0"
+        "php": "^7.1"
     },
     "autoload": {
-        "psr-0": {
-            "Msisdn": "src/"
-        }
+        "classmap": [
+            "src/Msisdn"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7"
     }
 }
