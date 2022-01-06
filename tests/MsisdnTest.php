@@ -53,6 +53,7 @@ final Class MsisdnTest extends TestCase
         );
     }
 
+
     public function testAirtelMsisdnMatchesCorrectMno() : void
     {
         $this->assertEquals(
@@ -60,6 +61,7 @@ final Class MsisdnTest extends TestCase
             Utility::getMobileNetworkOperator("0751 900 300")
         );
     }
+
 
     public function testFaibaMsisdnMatchesCorrectMno() : void
     {
@@ -77,11 +79,21 @@ final Class MsisdnTest extends TestCase
         );
     }
 
+
     public function testEquitelMsisdnMatchesCorrectMno() : void
     {
         $this->assertEquals(
             Utility::MNO_EQUITEL, 
             Utility::getMobileNetworkOperator("254764300222")
+        );
+    }
+
+
+    public function testInvalidlMsisdnReturnsNullMno() : void
+    {
+        $this->assertEquals(
+            null, 
+            Utility::getMobileNetworkOperator("25476430")
         );
     }
 
